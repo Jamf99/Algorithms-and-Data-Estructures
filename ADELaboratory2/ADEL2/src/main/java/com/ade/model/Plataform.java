@@ -10,10 +10,15 @@ public class Plataform {
 	public Plataform(String name) {
 		this.name = name;
 		size = 0;
+		first = null;
 	}
 	
 	public String getName() {
 		return name;
+	}
+	
+	public int getSize() {
+		return size;
 	}
 	
 	public Player getFirst() {
@@ -29,7 +34,8 @@ public class Plataform {
 	}
 	
 	public void add(Player player) {
-		Player p = new Player(player.getName(), player.getAverageDeaths(), player.getAverageKills(), player.getVictorys(), player.getAveragePing());
+		Player p = new Player(player.getName(), player.getDeaths(), player.getKills(), player.getVictories(), player.getGamesPlayed(),
+				player.getAveragePing(), player.getPlataform());
 		if (isEmpty()) {
 			first = p;
 		} else {
