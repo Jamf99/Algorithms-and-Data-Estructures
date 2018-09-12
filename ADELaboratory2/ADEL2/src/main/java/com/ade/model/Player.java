@@ -1,16 +1,16 @@
 package com.ade.model;
 
+import com.ade.estructures.Stack;
+
 public class Player {
 	
 	public static final int PLAYSTATION = 1;
 	public static final int XBOX = 2;
 	public static final int NINTENDO_SWITCH = 3;
 	public static final int SMARTPHONE = 4;
-	public static final int HIGH = 1;
-	public static final int MEDIUM = 2;
-	public static final int LOW = 3;
 	
 	private Player next;
+	private Stack<Weapon> weapons;
 	
 	private String name;
 	private double deaths;
@@ -30,32 +30,30 @@ public class Player {
 		this.averagePing = averagePing;
 		this.plataform = plataform;
 		this.next = null;
+		weapons = new Stack<Weapon>();
 	}
 	
-	public int calculateGameProwess() {
-		int gameProwess = 0;
+	public Stack<Weapon> getWeapons() {
+		return weapons;
+	}
+
+	public void shoot() {
+		if(weapons.getTop().getAmmo() > 0) {
+			weapons.getTop().setAmmo(weapons.getTop().getAmmo()-1);
+		}else {
+			weapons.pop();
+		}
+		
+	}
+	
+	public void pickWeapon(Weapon weapon) {
+		weapons.push(weapon);
+	}
+	
+	public double calculateGameProwess() {
 		double winProbability = victories/gamesPlayed;
-		double rating = winProbability*kills;
-		if(rating <= 40 && rating >=0) {
-			gameProwess = Player.LOW;
-		}else if(rating > 40 && rating <= 90){
-			gameProwess = Player.MEDIUM;
-		}else if(rating > 90) {
-			gameProwess = Player.HIGH;
-		}
+		double gameProwess = winProbability*kills;
 		return gameProwess;
-	}
-	
-	public int calculatePingRange() {
-		int ping = 0;
-		if(averagePing<= 150 && averagePing >=0) {
-			ping = Player.LOW;
-		}else if(averagePing > 150 && averagePing <= 400){
-			ping = Player.MEDIUM;
-		}else if(averagePing > 400) {
-			ping = Player.HIGH;
-		}
-		return ping;
 	}
 	
 	public Player getNext() {
