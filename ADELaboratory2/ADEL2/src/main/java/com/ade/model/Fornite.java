@@ -28,6 +28,15 @@ public class Fornite {
 		queueOfPlayers7 = new Queue<Player>();queueOfPlayers8 = new Queue<Player>();queueOfPlayers9 = new Queue<Player>();
 	}
 	
+	public void addPlayer(Player p) {
+		if(p.getPlataform() == p.NOPLATAFORM) {
+			players.addLast(p);
+			clasifyByGameProwessWithoutPlataform();
+		} else {
+			matchPlayersWithPlataformMode(p);
+		}
+	}
+	
 	public Plataform[] getPlataforms() {
 		return plataforms;
 	}
