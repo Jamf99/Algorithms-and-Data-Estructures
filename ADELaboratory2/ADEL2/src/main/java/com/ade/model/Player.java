@@ -4,6 +4,7 @@ import com.ade.estructures.Stack;
 
 public class Player {
 	
+	public static final int NOPLATAFORM = 0;
 	public static final int PLAYSTATION = 1;
 	public static final int XBOX = 2;
 	public static final int NINTENDO_SWITCH = 3;
