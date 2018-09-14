@@ -18,6 +18,7 @@ public class Fornite {
 		plataforms[1] = new Plataform("Xbox");
 		plataforms[2] = new Plataform("Nintendo Switch");
 		plataforms[3] = new Plataform("Smartphone");
+		plataforms[4] = new Plataform("PC");
 	}
 	
 	public Fornite(int x) {
@@ -76,6 +77,8 @@ public class Fornite {
 			plataforms[2].getPlayers().addLast(p);
 		}else if(p.getPlataform() == Player.SMARTPHONE) {
 			plataforms[3].getPlayers().addLast(p);
+		}else if(p.getPlataform() == Player.PC) {
+			plataforms[4].getPlayers().addLast(p);
 		}
 	}
 	
