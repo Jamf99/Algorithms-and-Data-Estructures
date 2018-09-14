@@ -9,6 +9,10 @@ import com.ade.model.Player;
 import junit.framework.TestCase;
 
 public class ForniteTest extends TestCase{
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 887748f2977a36657a3d270ecd276629ce5c94ec
 	private Player player;
 	private void stage1() {
 		ArrayList<Player> players = new ArrayList<Player>();
