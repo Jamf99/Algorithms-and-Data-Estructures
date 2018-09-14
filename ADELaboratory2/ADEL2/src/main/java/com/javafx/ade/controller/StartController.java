@@ -20,7 +20,7 @@ import javafx.scene.control.TextField;
 public class StartController implements Initializable{
 	
 	@FXML
-	private Button	 addPlayer;
+	private Button addPlayer;
 
 	@FXML
 	private TextField name;
