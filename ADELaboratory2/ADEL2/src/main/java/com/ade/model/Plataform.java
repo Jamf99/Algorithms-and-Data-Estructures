@@ -5,6 +5,13 @@ import com.ade.estructures.Queue;
 
 public class Plataform {
 	
+	public static final int NOPLATAFORM = 0;
+	public static final int PLAYSTATION = 1;
+	public static final int XBOX = 2;
+	public static final int NINTENDO_SWITCH = 3;
+	public static final int SMARTPHONE = 4;
+	public static final int PC = 5;
+	
 	private LinkedList<Player> players;
 	private Queue<Player> queueOfPlayers1, queueOfPlayers2, queueOfPlayers3, queueOfPlayers4, queueOfPlayers5, queueOfPlayers6, 
 							queueOfPlayers7, queueOfPlayers8, queueOfPlayers9;
