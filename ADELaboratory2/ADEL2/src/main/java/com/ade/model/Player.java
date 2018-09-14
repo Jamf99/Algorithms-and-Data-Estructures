@@ -8,6 +8,7 @@ public class Player {
 	public static final int XBOX = 2;
 	public static final int NINTENDO_SWITCH = 3;
 	public static final int SMARTPHONE = 4;
+	public static final int PC = 5;
 	
 	private Player next;
 	private Stack<Weapon> weapons;
