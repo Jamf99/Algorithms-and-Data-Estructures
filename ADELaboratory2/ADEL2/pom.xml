@@ -41,7 +41,7 @@
     			<artifactId>javafx-maven-plugin</artifactId>
    				<version>8.8.3</version>
     			<configuration>
-        			<mainClass>---</mainClass>
+        			<mainClass>com.javafx.ade.main.Main</mainClass>
     			</configuration>
   		</plugin>
   	</plugins>
