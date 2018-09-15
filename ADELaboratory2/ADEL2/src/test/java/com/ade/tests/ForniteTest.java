@@ -17,7 +17,7 @@ public class ForniteTest extends TestCase{
 	private void stage1() {
 		ArrayList<Player> players = new ArrayList<Player>();
 		for (int i = 0; i < 1000000; i++) {
-			player = new Player("ninja" + i, Math.random() * 50, Math.random() * 50, (int) Math.random() * 1000, (int) Math.random() * 1000, Math.random() * 500, 0);
+			player = new Player("ninja" + i, Math.random() * 50, (int) Math.random() * 1000, (int) Math.random() * 1000, Math.random() * 500, 0);
 			players.add(player);
 		}
 		for (int i = 0; i < players.size(); i++) {

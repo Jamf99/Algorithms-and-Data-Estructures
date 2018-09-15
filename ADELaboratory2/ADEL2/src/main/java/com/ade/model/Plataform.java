@@ -5,18 +5,26 @@ import com.ade.estructures.Queue;
 
 public class Plataform {
 	
+	public static final int NOPLATAFORM = 0;
+	public static final int PLAYSTATION = 1;
+	public static final int XBOX = 2;
+	public static final int NINTENDO_SWITCH = 3;
+	public static final int SMARTPHONE = 4;
+	public static final int PC = 5;
+	
 	private LinkedList<Player> players;
-	private Queue<Player> queueOfPlayers1, queueOfPlayers2, queueOfPlayers3, queueOfPlayers4, queueOfPlayers5, queueOfPlayers6, 
-							queueOfPlayers7, queueOfPlayers8, queueOfPlayers9;
+	private Queue<Player> noobLow, noobMid, noobHigh, mediumLow, mediumMid, mediumHigh, 
+		proLow, proMid, proHigh;
 	
 	private String name;
 		
 	public Plataform(String name) {
 		this.name = name;
 		players = new LinkedList<Player>();
-		queueOfPlayers1 = new Queue<Player>();queueOfPlayers2 = new Queue<Player>();queueOfPlayers3 = new Queue<Player>();
-		queueOfPlayers4 = new Queue<Player>();queueOfPlayers5 = new Queue<Player>();queueOfPlayers6 = new Queue<Player>();
-		queueOfPlayers7 = new Queue<Player>();queueOfPlayers8 = new Queue<Player>();queueOfPlayers9 = new Queue<Player>();
+		players = new LinkedList<Player>();
+		noobLow = new Queue<Player>();noobMid = new Queue<Player>();noobHigh = new Queue<Player>();
+		mediumLow = new Queue<Player>();mediumMid = new Queue<Player>();mediumHigh = new Queue<Player>();
+		proLow = new Queue<Player>();proMid = new Queue<Player>();proHigh = new Queue<Player>();
 	}
 	
 	public String getName() {
@@ -27,72 +35,72 @@ public class Plataform {
 		return players;
 	}
 	
-	public void clasifyByGameProwess() {
+	public void clasifyByGameProwessWithoutPlataform() {
 		Player aux = players.getFirstElement().getElement();
 		while(aux!=null) {
-			if(aux.calculateGameProwess() >= 0 && aux.calculateGameProwess() <= 40) {
+			if(aux.getGamesPlayed() > aux.getKills()) {
 				if(aux.getAveragePing() >= 0 && aux.getAveragePing() <=150) {
-					queueOfPlayers1.enqueue(aux);
+					noobLow.enqueue(aux);
 				}else if(aux.getAveragePing() > 150 && aux.getAveragePing() <= 400) {
-					queueOfPlayers2.enqueue(aux);
+					noobMid.enqueue(aux);
 				}else {
-					queueOfPlayers3.enqueue(aux);
+					noobHigh.enqueue(aux);
 				}
-			}else if(aux.calculateGameProwess() > 40 && aux.calculateGameProwess() <= 90) {
+			}else if(aux.getGamesPlayed() == aux.getKills()) {
 				if(aux.getAveragePing() >= 0 && aux.getAveragePing() <=150) {
-					queueOfPlayers4.enqueue(aux);
+					mediumLow.enqueue(aux);
 				}else if(aux.getAveragePing() > 150 && aux.getAveragePing() <= 400) {
-					queueOfPlayers5.enqueue(aux);
+					mediumMid.enqueue(aux);
 				}else {
-					queueOfPlayers6.enqueue(aux);
+					mediumHigh.enqueue(aux);
 				}
 			}else {
 				if(aux.getAveragePing() >= 0 && aux.getAveragePing() <=150) {
-					queueOfPlayers7.enqueue(aux);
+					proLow.enqueue(aux);
 				}else if(aux.getAveragePing() > 150 && aux.getAveragePing() <= 400) {
-					queueOfPlayers8.enqueue(aux);
+					proMid.enqueue(aux);
 				}else {
-					queueOfPlayers9.enqueue(aux);
+					proHigh.enqueue(aux);
 				}
 			}
 			aux = aux.getNext();
 		}
 	}
 	
-	public Queue<Player> getQueueOfPlayers1(){
-		return queueOfPlayers1;
+	public Queue<Player> getNoobLow(){
+		return noobLow;
 	}
 
-	public Queue<Player> getQueueOfPlayers2() {
-		return queueOfPlayers2;
+	public Queue<Player> getNoobMid() {
+		return noobMid;
 	}
 
-	public Queue<Player> getQueueOfPlayers3() {
-		return queueOfPlayers3;
+	public Queue<Player> getNoobHigh() {
+		return noobHigh;
 	}
 
-	public Queue<Player> getQueueOfPlayers4() {
-		return queueOfPlayers4;
+	public Queue<Player> getMediumLow() {
+		return mediumLow;
 	}
 
-	public Queue<Player> getQueueOfPlayers5() {
-		return queueOfPlayers5;
+	public Queue<Player> getMediumMid() {
+		return mediumMid;
 	}
 
-	public Queue<Player> getQueueOfPlayers6() {
-		return queueOfPlayers6;
+	public Queue<Player> getMediumHigh() {
+		return mediumHigh;
 	}
 
-	public Queue<Player> getQueueOfPlayers7() {
-		return queueOfPlayers7;
+	public Queue<Player> getProLow() {
+		return proLow;
 	}
 
-	public Queue<Player> getQueueOfPlayers8() {
-		return queueOfPlayers8;
+	public Queue<Player> getProMid() {
+		return proMid;
 	}
 
-	public Queue<Player> getQueueOfPlayers9() {
-		return queueOfPlayers9;
+	public Queue<Player> getProHigh() {
+		return proHigh;
 	}
 
 }
