@@ -94,28 +94,58 @@ public class StartController implements Initializable{
 	}
 
 	public int getPlatform() {
-		return platforms.getSelectionModel().getSelectedIndex()+1;
+		return platforms.getSelectionModel().getSelectedIndex();
 	}
+	
+	@FXML
+    private Label txtPlatform;
 
 	@FXML
 	void addPlayer(ActionEvent event) {
 		try {
 			Player p = new Player(getName(), getKills(), getVictories(), getGamesPlayed(), getAveragePing(), getPlatform());
-			fornite.addPlayer(p);
-			noobLow.setText(fornite.getNoobLow().size()+"");
-			noobMid.setText(fornite.getNoobMid().size()+"");
-			noobHigh.setText(fornite.getNoobHigh().size()+"");
-			mediumLow.setText(fornite.getMediumLow().size()+"");
-			mediumMid.setText(fornite.getMediumMid().size()+"");
-			mediumHigh.setText(fornite.getMediumHigh().size()+"");
-			proLow.setText(fornite.getProLow().size()+"");
-			proMid.setText(fornite.getProMid().size()+"");
-			proHigh.setText(fornite.getProHigh().size()+"");
-			name.setText("");
-			kills.setText("");
-			averagePing.setText("");
-			victories.setText("");
-			gamesPlayed.setText("");
+			boolean havePlatform = false;
+			if(getPlatform() == 0) {
+				fornite = new Fornite(1);
+				havePlatform = true;
+				fornite.addPlayer(p, havePlatform);
+				noobLow.setText(fornite.getNoobLow().size()+"");
+				noobMid.setText(fornite.getNoobMid().size()+"");
+				noobHigh.setText(fornite.getNoobHigh().size()+"");
+				mediumLow.setText(fornite.getMediumLow().size()+"");
+				mediumMid.setText(fornite.getMediumMid().size()+"");
+				mediumHigh.setText(fornite.getMediumHigh().size()+"");
+				proLow.setText(fornite.getProLow().size()+"");
+				proMid.setText(fornite.getProMid().size()+"");
+				proHigh.setText(fornite.getProHigh().size()+"");
+				name.setText("");
+				kills.setText("");
+				averagePing.setText("");
+				victories.setText("");
+				gamesPlayed.setText("");
+				txtPlatform.setText(platforms.getSelectionModel().getSelectedItem());
+			}else {
+				fornite = new Fornite();
+				String platform = platforms.getSelectionModel().getSelectedItem();
+				int posPlatform = platforms.getSelectionModel().getSelectedIndex()-1;
+				fornite.addPlayer(p, havePlatform);
+				noobLow.setText(fornite.getPlataforms()[posPlatform].getNoobLow().size()+"");
+				noobMid.setText(fornite.getPlataforms()[posPlatform].getNoobMid().size()+"");
+				noobHigh.setText(fornite.getPlataforms()[posPlatform].getNoobHigh().size()+"");
+				mediumLow.setText(fornite.getPlataforms()[posPlatform].getMediumLow().size()+"");
+				mediumMid.setText(fornite.getPlataforms()[posPlatform].getMediumMid().size()+"");
+				mediumHigh.setText(fornite.getPlataforms()[posPlatform].getMediumHigh().size()+"");
+				proLow.setText(fornite.getPlataforms()[posPlatform].getProLow().size()+"");
+				proMid.setText(fornite.getPlataforms()[posPlatform].getProMid().size()+"");
+				proHigh.setText(fornite.getPlataforms()[posPlatform].getProHigh().size()+"");
+				name.setText("");
+				kills.setText("");
+				averagePing.setText("");
+				victories.setText("");
+				gamesPlayed.setText("");
+				txtPlatform.setText(platform);
+			}
+			
 		}catch(ArithmeticException s) {
 			Alert message = new Alert(Alert.AlertType.ERROR);
 			message.setTitle("Error");
@@ -133,8 +163,7 @@ public class StartController implements Initializable{
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		fornite = new Fornite(1);
-		ObservableList<String> states = FXCollections.observableArrayList("PlayStation", "Xbox", "PC", "Smarthphone", "Nintendo Switch");
+		ObservableList<String> states = FXCollections.observableArrayList("Wihout platform", "PlayStation", "Xbox", "PC", "Smarthphone", "Nintendo Switch");
 		platforms.setItems(states);
 		platforms.getSelectionModel().select(0);
 	}
