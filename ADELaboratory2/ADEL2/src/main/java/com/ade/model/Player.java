@@ -8,17 +8,15 @@ public class Player {
 	private Stack<Weapon> weapons;
 	
 	private String name;
-	private double deaths;
 	private double kills;
 	private double averagePing;
 	private int plataform;
-	private int victories;
-	private int gamesPlayed;
+	private double victories;
+	private double gamesPlayed;
 	
-	public Player(String name, double deaths, double kills, int victories, int gamesPlayed, double averagePing, int plataform) {
+	public Player(String name, double kills, int victories, int gamesPlayed, double averagePing, int plataform) {
 		super();
 		this.name = name;
-		this.deaths = deaths;
 		this.kills = kills;
 		this.victories = victories;
 		this.gamesPlayed = gamesPlayed;
@@ -45,12 +43,6 @@ public class Player {
 		weapons.push(weapon);
 	}
 	
-	public double calculateGameProwess() {
-		double winProbability = victories/gamesPlayed;
-		double gameProwess = winProbability*kills;
-		return gameProwess;
-	}
-	
 	public Player getNext() {
 		return next;
 	}
@@ -67,10 +59,6 @@ public class Player {
 		return name;
 	}
 	
-	public double getDeaths() {
-		return deaths;
-	}
-	
 	public double getKills() {
 		return kills;
 	}
@@ -83,11 +71,11 @@ public class Player {
 		return plataform;
 	}
 
-	public int getVictories() {
+	public double getVictories() {
 		return victories;
 	}
 
-	public int getGamesPlayed() {
+	public double getGamesPlayed() {
 		return gamesPlayed;
 	}
 	
