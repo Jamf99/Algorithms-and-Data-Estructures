@@ -101,7 +101,7 @@ public class StartController implements Initializable{
 	void addPlayer(ActionEvent event) {
 		try {
 			Player p = new Player(getName(), getKills(), getVictories(), getGamesPlayed(), getAveragePing(), getPlatform());
-			fornite.addPlayer2(p);
+			fornite.addPlayer(p);
 			noobLow.setText(fornite.getNoobLow().size()+"");
 			noobMid.setText(fornite.getNoobMid().size()+"");
 			noobHigh.setText(fornite.getNoobHigh().size()+"");
