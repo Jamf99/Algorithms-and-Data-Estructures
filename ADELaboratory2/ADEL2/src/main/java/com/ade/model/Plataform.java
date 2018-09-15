@@ -35,7 +35,7 @@ public class Plataform {
 		return players;
 	}
 	
-	public void clasifyByGameProwessWithoutPlataform() {
+	public void clasifyByGameProwessWithPlataform() {
 		Player aux = players.getFirstElement().getElement();
 		while(aux!=null) {
 			if(aux.getGamesPlayed() > aux.getKills()) {
