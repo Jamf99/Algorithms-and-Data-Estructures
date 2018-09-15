@@ -37,7 +37,7 @@ public class Plataform {
 	public void clasifyByGameProwess() {
 		Player aux = players.getFirstElement().getElement();
 		while(aux!=null) {
-			if(aux.calculateGameProwess() >= 0 && aux.calculateGameProwess() <= 40) {
+			if(aux.getGamesPlayed() > aux.getKills()) {
 				if(aux.getAveragePing() >= 0 && aux.getAveragePing() <=150) {
 					queueOfPlayers1.enqueue(aux);
 				}else if(aux.getAveragePing() > 150 && aux.getAveragePing() <= 400) {
@@ -45,7 +45,7 @@ public class Plataform {
 				}else {
 					queueOfPlayers3.enqueue(aux);
 				}
-			}else if(aux.calculateGameProwess() > 40 && aux.calculateGameProwess() <= 90) {
+			}else if(aux.getGamesPlayed() == aux.getKills()) {
 				if(aux.getAveragePing() >= 0 && aux.getAveragePing() <=150) {
 					queueOfPlayers4.enqueue(aux);
 				}else if(aux.getAveragePing() > 150 && aux.getAveragePing() <= 400) {
