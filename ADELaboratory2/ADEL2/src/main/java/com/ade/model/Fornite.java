@@ -11,7 +11,6 @@ public class Fornite {
 	private Queue<Player> noobLow, noobMid, noobHigh, mediumLow, mediumMid, mediumHigh, 
 		proLow, proMid, proHigh;
 	
-	
 	public Fornite() {
 		plataforms = new Plataform[5];
 		plataforms[0] = new Plataform("PlayStation");
@@ -35,11 +34,6 @@ public class Fornite {
 		} else {
 			matchPlayersWithPlataformMode(p);
 		}
-	}
-	
-	public void addPlayer2(Player p) {
-		players.addLast(p);
-		clasifyByGameProwessWithoutPlataform();
 	}
 	
 	public Plataform[] getPlataforms() {
