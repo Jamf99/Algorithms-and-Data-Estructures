@@ -28,10 +28,9 @@ public class Fornite {
 	}
 	
 	public void addPlayer(Player p, boolean isPlatform) {
-		if(isPlatform) {
+		if(!isPlatform) {
 			players.addLast(p);
 			clasifyByGameProwessWithoutPlataform();
-			
 		} else {
 			matchPlayersWithPlataformMode(p);
 		}
