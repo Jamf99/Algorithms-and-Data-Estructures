@@ -27,10 +27,11 @@ public class Fornite {
 		proLow = new Queue<Player>();proMid = new Queue<Player>();proHigh = new Queue<Player>();
 	}
 	
-	public void addPlayer(Player p) {
-		if(p.getPlataform() == 0) {
+	public void addPlayer(Player p, boolean isPlatform) {
+		if(isPlatform) {
 			players.addLast(p);
 			clasifyByGameProwessWithoutPlataform();
+			
 		} else {
 			matchPlayersWithPlataformMode(p);
 		}
@@ -75,14 +76,19 @@ public class Fornite {
 	public void matchPlayersWithPlataformMode(Player p) {
 		if(p.getPlataform() == Plataform.PLAYSTATION) {
 			plataforms[0].getPlayers().addLast(p);
+			plataforms[0].clasifyByGameProwessWithPlataform();
 		}else if(p.getPlataform() == Plataform.XBOX) {
 			plataforms[1].getPlayers().addLast(p);
+			plataforms[1].clasifyByGameProwessWithPlataform();
 		}else if(p.getPlataform() == Plataform.NINTENDO_SWITCH) {
 			plataforms[2].getPlayers().addLast(p);
+			plataforms[2].clasifyByGameProwessWithPlataform();
 		}else if(p.getPlataform() == Plataform.SMARTPHONE) {
 			plataforms[3].getPlayers().addLast(p);
+			plataforms[3].clasifyByGameProwessWithPlataform();
 		}else if(p.getPlataform() == Plataform.PC) {
 			plataforms[4].getPlayers().addLast(p);
+			plataforms[4].clasifyByGameProwessWithPlataform();
 		}
 	}
 	
