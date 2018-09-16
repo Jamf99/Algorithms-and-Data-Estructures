@@ -13,7 +13,6 @@ import junit.framework.TestCase;
 public class ForniteTest extends TestCase{
 	
 	private Player player;
-//	private Plataform plataform;
 	private Fornite fornite;
 	
 	private void stage1() {
@@ -266,22 +265,4 @@ public class ForniteTest extends TestCase{
 		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getProHigh().getFront());
 	}
 	
-//	private void stage4() {
-//		fornite = new Fornite();
-//		fornite = new Fornite(1);
-//		player = new Player("Ninja", 60, 20, 20, 50, 0);
-//		fornite.addPlayer(player, false);
-//	}
-//	@Test
-//	public void testclasifyByGameProwessWithoutPlataform2() {
-//		stage4();
-//		assertNotNull(fornite.getProLow());
-//	}
-//	private void stage2() {
-//		ArrayList<Player> players = new ArrayList<Player>();
-//		for (int i = 0; i < 1000000; i++) {
-//			player = new Player("ninja" + i, Math.random() * 50, (int) Math.random() * 1000, (int) Math.random() * 1000, Math.random() * 500, 0);
-//			players.add(player);
-//		}
-//	}
 }
