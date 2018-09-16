@@ -14,8 +14,8 @@ public class ForniteTest extends TestCase{
 	private Fornite fornite;
 	
 	private void stage1() {
-		player = new Player("Ninja", 60, 20, 20, 50, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("Ninja", 60, 20, 20, 50, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -27,7 +27,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage2() {
 		player = new Player("Ninja", 60, 20, 20, 50, 1);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -48,8 +48,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage3() {
-		player = new Player("Cristian", 0, 1, 10, 0, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("Cristian", 0, 1, 10, 0, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -60,8 +60,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage4() {
-		player = new Player("Gamarra", 0, 1, 10, 200, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("Gamarra", 0, 1, 10, 200, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -72,8 +72,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage5() {
-		player = new Player("CamiloBarrios", 0, 1, 10, 500, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("CamiloBarrios", 0, 1, 10, 500, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -84,8 +84,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage6() {
-		player = new Player("Reyes", 20, 20, 20, 50, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("Reyes", 20, 20, 20, 50, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -96,8 +96,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage7() {
-		player = new Player("LolitoFdz", 20, 20, 20, 200, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("LolitoFdz", 20, 20, 20, 200, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -108,8 +108,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage8() {
-		player = new Player("Norha", 20, 20, 20, 1000, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("Norha", 20, 20, 20, 1000, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -120,8 +120,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage9() {
-		player = new Player("Dakotaz", 50, 20, 20, 100, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("Dakotaz", 50, 20, 20, 100, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -132,8 +132,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage10() {
-		player = new Player("Ninja", 50, 20, 20, 200, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("Ninja", 50, 20, 20, 200, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -144,8 +144,8 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage11() {
-		player = new Player("KingRichard", 50, 20, 20, 1000, 0);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		player = new Player("KingRichard", 50, 20, 20, 1000, 5);
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -157,7 +157,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage12() {
 		player = new Player("Cristian", 0, 1, 10, 0, 1);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -169,7 +169,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage13() {
 		player = new Player("Gamarra", 0, 1, 10, 200, 1);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -181,7 +181,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage14() {
 		player = new Player("CamiloBarrios", 0, 1, 10, 500, 2);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -193,7 +193,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage15() {
 		player = new Player("Reyes", 20, 20, 20, 50, 2);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -205,7 +205,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage16() {
 		player = new Player("LolitoFdz", 20, 20, 20, 200, 3);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -217,7 +217,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage17() {
 		player = new Player("Norha", 20, 20, 20, 1000, 3);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -229,7 +229,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage18() {
 		player = new Player("Dakotaz", 50, 20, 20, 100, 4);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -241,7 +241,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage19() {
 		player = new Player("Ninja", 50, 20, 20, 200, 4);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
@@ -253,7 +253,7 @@ public class ForniteTest extends TestCase{
 	
 	private void stage20() {
 		player = new Player("KingRichard", 50, 20, 20, 1000, 4);
-		boolean plataform = player.getPlataform() == 0 ? false : true;
+		boolean plataform = player.getPlataform() == 5 ? false : true;
 		fornite = new Fornite(plataform);
 	}
 	@Test
