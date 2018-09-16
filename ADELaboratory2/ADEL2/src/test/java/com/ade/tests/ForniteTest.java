@@ -1,7 +1,5 @@
 package com.ade.tests;
 
-import java.util.ArrayList;
-
 import org.junit.Test;
 
 import com.ade.model.Fornite;
