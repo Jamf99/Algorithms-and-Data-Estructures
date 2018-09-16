@@ -27,14 +27,7 @@ public class Fornite {
 		proLow = new Queue<Player>();proMid = new Queue<Player>();proHigh = new Queue<Player>();
 	}
 	
-	public void addPlayer(Player p, boolean isPlatform) {
-		if(!isPlatform) {
-			players.addLast(p);
-			clasifyByGameProwessWithoutPlataform();
-		} else {
-			matchPlayersWithPlataformMode(p);
-		}
-	}
+	
 	
 	public Plataform[] getPlataforms() {
 		return plataforms;
