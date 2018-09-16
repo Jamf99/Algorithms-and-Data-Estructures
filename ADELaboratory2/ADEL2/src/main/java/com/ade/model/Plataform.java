@@ -5,12 +5,11 @@ import com.ade.estructures.Queue;
 
 public class Plataform {
 	
-	public static final int NOPLATAFORM = 0;
-	public static final int PLAYSTATION = 1;
-	public static final int XBOX = 2;
-	public static final int NINTENDO_SWITCH = 3;
-	public static final int SMARTPHONE = 4;
-	public static final int PC = 5;
+	public static final int PLAYSTATION = 0;
+	public static final int XBOX = 1;
+	public static final int NINTENDO_SWITCH = 2;
+	public static final int SMARTPHONE = 3;
+	public static final int PC = 4;
 	
 	private LinkedList<Player> players;
 	private Queue<Player> noobLow, noobMid, noobHigh, mediumLow, mediumMid, mediumHigh, 
