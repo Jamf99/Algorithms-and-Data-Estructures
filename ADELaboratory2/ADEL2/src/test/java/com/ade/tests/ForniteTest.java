@@ -14,27 +14,24 @@ public class ForniteTest extends TestCase{
 	
 	private Player player;
 //	private Plataform plataform;
-//	private Plataform plataformP;
-//	private Plataform plataformX;
-//	private Plataform plataformN;
-//	private Plataform plataformS;
-//	private Plataform plataformPC;
 	private Fornite fornite;
 	
 	private void stage1() {
-		fornite = new Fornite();
-		fornite = new Fornite(1);
 		player = new Player("Ninja", 60, 20, 20, 50, 0);
-		fornite.addPlayer(player, false);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
 	}
 	@Test
 	public void testAddPlayer() {
 		stage1();
+		fornite.addPlayer(player, false);
 		assertNotNull(fornite.getProLow().getFront());
 	}
 	
 	private void stage2() {
-		fornite = new Fornite();
+		player = new Player("Ninja", 60, 20, 20, 50, 1);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
 	}
 	@Test
 	public void testGetPlataform() {
@@ -54,54 +51,220 @@ public class ForniteTest extends TestCase{
 	}
 	
 	private void stage3() {
-		fornite = new Fornite();
-		fornite = new Fornite(1);
-		player = new Player("Sarna", 0, 0, 0, 0, 0);
-		fornite.addPlayer(player, false);
+		player = new Player("Cristian", 0, 1, 10, 0, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
 	}
 	@Test
 	public void testclasifyByGameProwessWithoutPlataform1() {
 		stage3();
+		fornite.addPlayer(player, false);
 		assertNotNull(fornite.getNoobLow().getFront());
 	}
 	
 	private void stage4() {
-		fornite = new Fornite();
-		fornite = new Fornite(1);
-		player = new Player("Gamarra", 0, 0, 0, 200, 0);
-		fornite.addPlayer(player, false);
+		player = new Player("Gamarra", 0, 1, 10, 200, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
 	}
 	@Test
 	public void testclasifyByGameProwessWithoutPlataform2() {
 		stage4();
+		fornite.addPlayer(player, false);
 		assertNotNull(fornite.getNoobMid().getFront());
 	}
 	
 	private void stage5() {
-		fornite = new Fornite();
-		fornite = new Fornite(1);
-		player = new Player("CamiloBarrios", 50, 0, 0, 500, 0);
-		fornite.addPlayer(player, false);
+		player = new Player("CamiloBarrios", 0, 1, 10, 500, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
 	}
 	@Test
 	public void testclasifyByGameProwessWithoutPlataform3() {
 		stage5();
+		fornite.addPlayer(player, false);
 		assertNotNull(fornite.getNoobHigh().getFront());
 	}
 	
 	private void stage6() {
-		fornite = new Fornite();
-		fornite = new Fornite(1);
-		player = new Player("Reyes", 60, 20, 20, 50, 0);
-		fornite.addPlayer(player, false);
+		player = new Player("Reyes", 20, 20, 20, 50, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
 	}
 	@Test
 	public void testclasifyByGameProwessWithoutPlataform4() {
 		stage6();
+		fornite.addPlayer(player, false);
+		assertNotNull(fornite.getMediumLow().getFront());
+	}
+	
+	private void stage7() {
+		player = new Player("LolitoFdz", 20, 20, 20, 200, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testclasifyByGameProwessWithoutPlataform5() {
+		stage7();
+		fornite.addPlayer(player, false);
+		assertNotNull(fornite.getMediumMid().getFront());
+	}
+	
+	private void stage8() {
+		player = new Player("Norha", 20, 20, 20, 1000, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testclasifyByGameProwessWithoutPlataform6() {
+		stage8();
+		fornite.addPlayer(player, false);
+		assertNotNull(fornite.getMediumHigh().getFront());
+	}
+	
+	private void stage9() {
+		player = new Player("Dakotaz", 50, 20, 20, 100, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testclasifyByGameProwessWithoutPlataform7() {
+		stage9();
+		fornite.addPlayer(player, false);
 		assertNotNull(fornite.getProLow().getFront());
 	}
 	
+	private void stage10() {
+		player = new Player("Ninja", 50, 20, 20, 200, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testclasifyByGameProwessWithoutPlataform8() {
+		stage10();
+		fornite.addPlayer(player, false);
+		assertNotNull(fornite.getProMid().getFront());
+	}
 	
+	private void stage11() {
+		player = new Player("KingRichard", 50, 20, 20, 1000, 0);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testclasifyByGameProwessWithoutPlataform9() {
+		stage11();
+		fornite.addPlayer(player, false);
+		assertNotNull(fornite.getProHigh().getFront());
+	}
+	
+	private void stage12() {
+		player = new Player("Cristian", 0, 1, 10, 0, 1);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode1() {
+		stage12();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getNoobLow().getFront());
+	}
+	
+	private void stage13() {
+		player = new Player("Gamarra", 0, 1, 10, 200, 1);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode2() {
+		stage13();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getNoobMid().getFront());
+	}
+	
+	private void stage14() {
+		player = new Player("CamiloBarrios", 0, 1, 10, 500, 2);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode3() {
+		stage14();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getNoobHigh().getFront());
+	}
+	
+	private void stage15() {
+		player = new Player("Reyes", 20, 20, 20, 50, 2);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode4() {
+		stage15();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getMediumLow().getFront());
+	}
+	
+	private void stage16() {
+		player = new Player("LolitoFdz", 20, 20, 20, 200, 3);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode5() {
+		stage16();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getMediumMid().getFront());
+	}
+	
+	private void stage17() {
+		player = new Player("Norha", 20, 20, 20, 1000, 3);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode6() {
+		stage17();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getMediumHigh().getFront());
+	}
+	
+	private void stage18() {
+		player = new Player("Dakotaz", 50, 20, 20, 100, 4);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode7() {
+		stage18();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getProLow().getFront());
+	}
+	
+	private void stage19() {
+		player = new Player("Ninja", 50, 20, 20, 200, 4);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode8() {
+		stage19();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getProMid().getFront());
+	}
+	
+	private void stage20() {
+		player = new Player("KingRichard", 50, 20, 20, 1000, 4);
+		boolean plataform = player.getPlataform() == 0 ? false : true;
+		fornite = new Fornite(plataform);
+	}
+	@Test
+	public void testMatchPlayersWithPlataformMode9() {
+		stage20();
+		fornite.addPlayer(player, true);
+		assertNotNull(fornite.getPlataforms()[player.getPlataform()].getProHigh().getFront());
+	}
 	
 //	private void stage4() {
 //		fornite = new Fornite();
