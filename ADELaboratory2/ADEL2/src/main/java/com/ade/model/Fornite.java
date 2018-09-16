@@ -6,28 +6,35 @@ import com.ade.estructures.Queue;
 public class Fornite {
 	
 	private Plataform[] plataforms;
-
+	
 	private LinkedList<Player> players;
 	private Queue<Player> noobLow, noobMid, noobHigh, mediumLow, mediumMid, mediumHigh, 
 		proLow, proMid, proHigh;
 	
-	public Fornite() {
-		plataforms = new Plataform[5];
-		plataforms[0] = new Plataform("PlayStation");
-		plataforms[1] = new Plataform("Xbox");
-		plataforms[2] = new Plataform("Nintendo Switch");
-		plataforms[3] = new Plataform("Smartphone");
-		plataforms[4] = new Plataform("PC");
+	public Fornite(boolean havePlatform) {
+		if(havePlatform == true) {
+			plataforms = new Plataform[5];
+			plataforms[0] = new Plataform("PlayStation");
+			plataforms[1] = new Plataform("Xbox");
+			plataforms[2] = new Plataform("Nintendo Switch");
+			plataforms[3] = new Plataform("Smartphone");
+			plataforms[4] = new Plataform("PC");
+		}else {
+			players = new LinkedList<Player>();
+			noobLow = new Queue<Player>();noobMid = new Queue<Player>();noobHigh = new Queue<Player>();
+			mediumLow = new Queue<Player>();mediumMid = new Queue<Player>();mediumHigh = new Queue<Player>();
+			proLow = new Queue<Player>();proMid = new Queue<Player>();proHigh = new Queue<Player>();
+		}
 	}
 	
-	public Fornite(int x) {
-		players = new LinkedList<Player>();
-		noobLow = new Queue<Player>();noobMid = new Queue<Player>();noobHigh = new Queue<Player>();
-		mediumLow = new Queue<Player>();mediumMid = new Queue<Player>();mediumHigh = new Queue<Player>();
-		proLow = new Queue<Player>();proMid = new Queue<Player>();proHigh = new Queue<Player>();
+	public void addPlayer(Player p, boolean havePlatform) {
+		if(havePlatform) {
+			matchPlayersWithPlataformMode(p);
+		} else {
+			players.addLast(p);
+			clasifyByGameProwessWithoutPlataform();	
+		}
 	}
-	
-	
 	
 	public Plataform[] getPlataforms() {
 		return plataforms;
