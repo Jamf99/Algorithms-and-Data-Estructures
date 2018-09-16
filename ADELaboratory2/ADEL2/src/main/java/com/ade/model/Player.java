@@ -29,7 +29,11 @@ public class Player {
 	public Stack<Weapon> getWeapons() {
 		return weapons;
 	}
-
+	
+	public void pickWeapon(Weapon weapon) {
+		weapons.push(weapon);
+	}
+	
 	public void shoot() {
 		if(weapons.getTop().getAmmo() > 0) {
 			weapons.getTop().setAmmo(weapons.getTop().getAmmo()-1);
@@ -37,10 +41,6 @@ public class Player {
 			weapons.pop();
 		}
 		
-	}
-	
-	public void pickWeapon(Weapon weapon) {
-		weapons.push(weapon);
 	}
 	
 	public Player getNext() {
