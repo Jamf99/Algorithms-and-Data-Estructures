@@ -1,4 +1,4 @@
-				package com.ade.model;
+package com.ade.model;
 
 import com.ade.estructures.LinkedList;
 import com.ade.estructures.Queue;
